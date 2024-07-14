@@ -1,0 +1,25 @@
+{
+  "name": "tasky",
+  "version": "1.0.0",
+  "description": "Just me trying to write an ideal microservices based backend system.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "lint": "eslint .",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "achhayapathak",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.7.0",
+    "eslint": "^9.7.0",
+    "globals": "^15.8.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.4"
+  }
+}

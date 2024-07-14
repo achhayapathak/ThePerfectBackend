@@ -1,0 +1,29 @@
+name: Build
+
+on:
+    push:
+        branches: ["main"]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout Repo
+              uses: actions/checkout@v4
+
+            - name: Install NodeJs
+              uses: actions/setup-node@v3
+              with:
+                node-version: 20
+                cache: "npm"
+                cache-dependency-path: '**/package-lock.json'
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Check the Linting
+              run: npm run lint 
+
+            - name: Run tests
+              run: npm run test
